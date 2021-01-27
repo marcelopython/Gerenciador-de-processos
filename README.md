@@ -1,6 +1,6 @@
 
 
-#Dependências
+##Dependências
 
 **python 3.6**
 
@@ -18,11 +18,11 @@
 
 **time**
 
-#Plataforma
+##Plataforma
 
 **linux**
 
-#Objetivo
+##Objetivo
 
 Programa foi desenvolvido para facilitar no gerenciamento de processos do SO
 
