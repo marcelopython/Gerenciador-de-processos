@@ -11,7 +11,9 @@ class Main(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(Main, self).__init__(parent)
         self.setupUi(self)
+        self.thread = None
         self.StartButtonEvent()
+
 
     def process(self):
         header = ['pid', 'name', 'status', 'username']
@@ -24,7 +26,7 @@ class Main(QMainWindow, Ui_MainWindow):
                 info = processo.as_dict(attrs=header)[column]
                 self.tableWidget.setItem(line, lineColumn, QTableWidgetItem(str(info)))
                 lineColumn = lineColumn + 1
-            kill = QPushButton('Kill')
+            kill = QPushButton('KILL')
             kill.clicked.connect(self.handleButtonClicked)
             self.tableWidget.setCellWidget(line, 4, kill)
             line = line + 1
@@ -37,23 +39,20 @@ class Main(QMainWindow, Ui_MainWindow):
         system(f'kill -9 {pid}')
 
     def StartButtonEvent(self):
-        self.test = ExecuteThread()
-        self.test.start()
-        self.test.finished.connect(self.thread_finished)
-        self.test.my_signal.connect(self.my_event)
+        self.thread = ExecuteThread()
+        self.thread.start()
+        self.thread.finished.connect(self.thread_finished)
+        self.thread.sinal.connect(self.process)
 
     def thread_finished(self):
         pass
 
-    def my_event(self):
-        self.process()
-
 class ExecuteThread(QThread):
-    my_signal = pyqtSignal()
+    sinal = pyqtSignal()
 
     def run(self):
         while True:
-            self.my_signal.emit()
+            self.sinal.emit()
             sleep(3)
 
 if __name__ == '__main__':
