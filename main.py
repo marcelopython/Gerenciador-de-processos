@@ -12,9 +12,6 @@ from ipaddress import ip_address
 from UI.Alert import Alert
 
 
-# self.ssh.connect(hostname='192.168.16.108', username='virtual', password='123')
-
-
 class Ssh(QMainWindow, Ui_SSH):
 
     def __init__(self, parent=None):
