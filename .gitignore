@@ -1,2 +1,5 @@
 UI_xml
 .idea
+/build
+/dist
+main.spec

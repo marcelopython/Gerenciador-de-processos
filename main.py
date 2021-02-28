@@ -1,15 +1,15 @@
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QPushButton
+from PyQt5.QtCore import pyqtSignal, QThread
 from UI.main import Ui_MainWindow
 from UI.ssh import Ui_SSH
+from UI.Alert import Alert
 import sys
 import psutil as ps
-from PyQt5.QtCore import pyqtSignal, QThread
 from time import sleep
 from hurry.filesize import size, alternative
 from paramiko import SSHClient, AutoAddPolicy
 from ipaddress import ip_address
-from UI.Alert import Alert
 
 
 class Ssh(QMainWindow, Ui_SSH):
