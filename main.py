@@ -76,7 +76,6 @@ class Ssh(QMainWindow, Ui_SSH):
         stdin, stdout, stderr = self.ssh.exec_command('kill -9 ' + pid)
         if stderr.channel.recv_exit_status() != 0:
             Alert(message='Falha ao finalizar o processo ' + pid, title='Processo')
-            print(stderr.read())
 
     def startThead(self):
         self.thread = ExecuteThread()
@@ -94,7 +93,7 @@ def startSsh(user=None, hostname=None, password=None):
         ssh.startThead()
         ssh.show()
     except Exception as e:
-        Alert(str(e.args[1]), 'Falha ao fazer conexão')
+        Alert(str(e.args), 'Falha ao fazer conexão')
 
 
 class Main(QMainWindow, Ui_MainWindow):
@@ -164,6 +163,7 @@ class Main(QMainWindow, Ui_MainWindow):
         user = self.lineEditUser.text()
         hostname = self.lineEditHost.text()
         password = self.lineEditPass.text()
+
         if not user or not hostname or not password:
             Alert(message='Dados incompletos', title="Complete os dados")
             return
