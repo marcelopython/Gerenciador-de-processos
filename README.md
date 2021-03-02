@@ -1,6 +1,6 @@
 
 
-#Dependências
+# Dependências
 
 **python 3.6**
 
@@ -14,11 +14,19 @@
 
 **time**
 
-#Plataforma
+**hurry**
+
+**paramiko**
+
+**ipaddress**
+
+**json**
+
+# Plataforma
 
 **linux**
 
-#Objetivo
+# Objetivo
 
-Programa foi desenvolvido para facilitar no gerenciamento de processos do SO
+Programa foi desenvolvido para facilitar no gerenciamento de processos do SO, e fazer conxão via ssh em outra maquina para gerenciar os processos
 
