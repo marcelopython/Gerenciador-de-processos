@@ -28,5 +28,5 @@
 
 # Objetivo
 
-Programa foi desenvolvido para facilitar no gerenciamento de processos do SO, e fazer conxão via ssh em outra maquina para gerenciar os processos
+Programa foi desenvolvido para facilitar no gerenciamento de processos do SO, e fazer conexão via ssh em outra maquina para gerenciar os processos
 
