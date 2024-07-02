@@ -12,7 +12,7 @@ from paramiko import SSHClient, AutoAddPolicy
 from ipaddress import ip_address
 from json import JSONDecoder
 
-
+Faz um conexão
 class Ssh(QMainWindow, Ui_SSH):
 
     def __init__(self, parent=None):
