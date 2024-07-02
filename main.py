@@ -18,7 +18,7 @@ Faz um conexão
 aqui tem um erro e não pode passar
 $var->2
 
-class Ssh(QMainWindow, Ui_SSH):
+clas Ssh(QMainWindow, Ui_SSH):
 
     def __init__(self, parent=None):
         super(Ssh, self).__init__(parent)
