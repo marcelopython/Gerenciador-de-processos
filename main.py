@@ -13,7 +13,12 @@ from ipaddress import ip_address
 from json import JSONDecoder
 
 Faz um conexão
-class Ssh(QMainWindow, Ui_SSH):
+
+
+aqui tem um erro e não pode passar
+$var->2
+
+clas Ssh(QMainWindow, Ui_SSH):
 
     def __init__(self, parent=None):
         super(Ssh, self).__init__(parent)
